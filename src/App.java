@@ -28,6 +28,9 @@ public class App {
 
         // Payment done
         tripManager.getTripMap().get(newTripId).setTripStatus(TripStatus.ENDED);
+
+        // Rate driver and user
+        
         System.out.println("Ride Completed");
     }
 }
