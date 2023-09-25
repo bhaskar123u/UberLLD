@@ -11,9 +11,9 @@ public class App {
         TripManager tripManager = TripManager.getInstance();
         UUID newTripId = tripManager.createTrip(user1, new Location("GolaRoad", 801503),
                 new Location("Kankarbagh", 800020));
-        
-        //
 
+        // add this trip to list of trips for this user
+        
         // Get confirmed trip details at every 5 seconds
         while (tripManager.getTripMap().get(newTripId).getTripStatus() != TripStatus.STARTED) {
             ConfirmedTripDetail upComingTrip = tripManager.getConfirmedTripDetail(newTripId);
