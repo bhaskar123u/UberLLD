@@ -33,7 +33,7 @@ public class TripManager {
     strategyManager.setDriverMatchingStrategy(tripMetaData);
     strategyManager.setPricingStrategy(tripMetaData);
 
-    // Driver accepted
+    // Multiple driver accepted
     Driver driver = strategyManager.getDriverMatchingStrategy().bestDriver(tripMetaData);
     int price = strategyManager.getPricingStrategy().bestPrice(tripMetaData);
 
